@@ -50,7 +50,7 @@
                     `;
 
                     // Append HTML vào #show-comments
-                    $('#show-comments').append(commentHTML);
+                    $('#show-comments').prepend(commentHTML);
                 });
             },
             error: function() {
