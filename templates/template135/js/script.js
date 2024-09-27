@@ -37,7 +37,7 @@
     $(document).ready(function() {
         $.ajax({
             type: "GET",
-            url: "https://script.google.com/macros/s/AKfycbxsmV9AOxN31XoAHFiP9UfYRpoZUdYmX9R3rDPzQEySD4TFpqalVf6cEXyTbb25z7240g/exec",
+            url: "https://script.google.com/macros/s/AKfycbyjSlC6ymLR8fasKqCIVA8CNsX5NvqfQs019drdtpqnUfe375uHi70NBdZUqQrbBErEMw/exec",
             success: function (res) {
                 res.forEach(function(row) {
                     var name = $('<span>').text(row[1]).html();
@@ -106,7 +106,7 @@
                 var content = $('#content').val();
                 $.ajax({
                     type: "POST",
-                    url: "https://script.google.com/macros/s/AKfycbxsmV9AOxN31XoAHFiP9UfYRpoZUdYmX9R3rDPzQEySD4TFpqalVf6cEXyTbb25z7240g/exec",
+                    url: "https://script.google.com/macros/s/AKfycbyjSlC6ymLR8fasKqCIVA8CNsX5NvqfQs019drdtpqnUfe375uHi70NBdZUqQrbBErEMw/exec",
                     contentType: 'text/plain',
                     data: JSON.stringify({
                     name: name,
