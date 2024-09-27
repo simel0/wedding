@@ -26,21 +26,21 @@ jobs:
         npm install html-minifier terser clean-css-cli -g
         # Minify HTML
         html-minifier index.html --collapse-whitespace --remove-comments --minify-css true --minify-js true -o index.html
-        # Minify JavaScript files in common
-        terser common/emoji-picker/database.js -o common/emoji-picker --compress --mangle
-        terser common/emoji-picker/index.js -o common/emoji-picker --compress --mangle
-        terser common/emoji-picker/init.js -o common/emoji-picker --compress --mangle
-        terser common/emoji-picker/insertTextAtCursor.js -o common/emoji-picker --compress --mangle
-        terser common/emoji-picker/picker.js -o common/emoji-picker --compress --mangle
-        terser common/bii.js -o common --compress --mangle
-        terser common/calendar.js -o common --compress --mangle
-        # Minify JavaScript files in templates
-        terser templates/template135/js/libs.js -o templates/template135/js --compress --mangle
-        terser templates/template135/js/script.js -o templates/template135/js --compress --mangle
+        # Minify and replace JavaScript files in common
+        terser common/emoji-picker/database.js -o common/emoji-picker/database.js --compress --mangle
+        terser common/emoji-picker/index.js -o common/emoji-picker/index.js --compress --mangle
+        terser common/emoji-picker/init.js -o common/emoji-picker/init.js --compress --mangle
+        terser common/emoji-picker/insertTextAtCursor.js -o common/emoji-picker/insertTextAtCursor.js --compress --mangle
+        terser common/emoji-picker/picker.js -o common/emoji-picker/picker.js --compress --mangle
+        terser common/bii.js -o common/bii.js --compress --mangle
+        terser common/calendar.js -o common/calendar.js --compress --mangle
+        # Minify and replace JavaScript files in templates
+        terser templates/template135/js/libs.js -o templates/template135/js/libs.js --compress --mangle
+        terser templates/template135/js/script.js -o templates/template135/js/script.js --compress --mangle
         # Minify CSS files
         cleancss -o common/calendar.css common/calendar.css
         cleancss -o css/libs.css css/libs.css
-        cleancss -o css/style.css css/style.csss
+        cleancss -o css/style.css css/style.css
 
     - name: Deploy to Minify Branch
       uses: peaceiris/actions-gh-pages@v3
