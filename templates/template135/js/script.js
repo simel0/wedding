@@ -103,7 +103,7 @@
                 $("#loader").css("display", "inline-block");
                 // Collect form data
                 var name = $('#name-comment').val();
-                var content = $('#content').val();
+                var content = $('#detail-comment').val();
                 $.ajax({
                     type: "POST",
                     url: "https://script.google.com/macros/s/AKfycbxsmV9AOxN31XoAHFiP9UfYRpoZUdYmX9R3rDPzQEySD4TFpqalVf6cEXyTbb25z7240g/exec",
