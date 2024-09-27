@@ -25,8 +25,8 @@ jobs:
       run: |
         npm install html-minifier terser clean-css-cli -g
         html-minifier --input-dir ./ --output-dir ./ --file-ext html --collapse-whitespace --remove-comments
-        terser src/**/*.js -o src --compress --mangle
-        cleancss -o src/**/*.css src/**/*.css
+        terser *.js -o . --compress --mangles
+        cleancss -o *.css *.css
 
     - name: Deploy to Minify Branch
       uses: peaceiris/actions-gh-pages@v3
