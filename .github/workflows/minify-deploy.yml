@@ -45,6 +45,6 @@ jobs:
     - name: Deploy to Minify Branch
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.WEDDING_TOKEN }}
+        github_token: ${{ secrets.TOKEN }}
         publish_branch: minify  
         publish_dir: ./  
