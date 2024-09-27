@@ -104,6 +104,7 @@
                 // Collect form data
                 var name = $('#name-comment').val();
                 var content = $('#detail-comment').val();
+                $('#btn-submit-comment').attr("disabled", true); 
                 $.ajax({
                     type: "POST",
                     url: "https://script.google.com/macros/s/AKfycbyjSlC6ymLR8fasKqCIVA8CNsX5NvqfQs019drdtpqnUfe375uHi70NBdZUqQrbBErEMw/exec",
@@ -129,6 +130,7 @@
                         }
 
                         form.reset();
+                        $('#btn-submit-comment').attr("disabled", false);
                     },
                     error: function() {
                         $( "#loader").hide();
